@@ -9,7 +9,22 @@ class SearchView extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Search a city'),
       ),
-      
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        child: Center(
+          child: TextField(
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.symmetric(vertical: 32 , horizontal: 16),
+              labelText: 'Search',
+              suffixIcon: Icon(Icons.search),
+              hintText: 'Enter a city name',
+              border: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.red),
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
