@@ -13,16 +13,27 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Weather App'),
         actions: [
-          IconButton(onPressed: (){
-            Navigator.of(context).push(MaterialPageRoute(builder: (context){
-              return const SearchView();
-            }));
-          },
-          icon: const Icon(Icons.search),
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return const SearchView();
+              }));
+            },
+            icon: const Icon(Icons.search),
           )
         ],
       ),
-      body: weatherModel == null ? const NoWeatherBody() : const WeatherInfoBody(),
+      body: weatherModel == null
+          ? const NoWeatherBody()
+          : const WeatherInfoBody(),
     );
   }
 }
+
+
+// create state
+// create cubit
+// create function
+// provide cubit
+// integrate cubit
+// trigger cubit
