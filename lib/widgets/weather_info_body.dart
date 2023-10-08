@@ -17,9 +17,9 @@ class WeatherInfoBody extends StatelessWidget {
             weatherModel.cityName,
             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
           ),
-          const Text(
-            'Updated at 1:45',
-            style: TextStyle(fontSize: 24),
+          Text(
+            'Updated at ${weatherModel.date.hour}:${weatherModel.date.minute}',
+            style: const TextStyle(fontSize: 24),
           ),
           const SizedBox(
             height: 32,
@@ -52,3 +52,7 @@ class WeatherInfoBody extends StatelessWidget {
     );
   }
 }
+
+// DateTime stringToTimeDate(String val) {
+//   return DateTime.parse(val);
+// }

@@ -7,9 +7,14 @@ import 'package:weather_app/widgets/weather_info_body.dart';
 
 import 'search_view.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +39,7 @@ class HomePage extends StatelessWidget {
           } 
           else if(state is WeatherLoadedState)
           {
-            return WeatherInfoBody();
+            return const WeatherInfoBody();
           }
           return const Text('There was an error');
         } ,
