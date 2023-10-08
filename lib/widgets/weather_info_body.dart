@@ -27,15 +27,18 @@ class WeatherInfoBody extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset('assets/images/cloudy.png'),
+              Image.network('https:${weatherModel.image}'),
               Text(
                 weatherModel.temp.toString(),
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
               ),
-              const Column(
+              Column(
                 children: [
-                  Text('Maxtemp : 24', style: TextStyle(fontSize: 16)),
-                  Text('Mintemp : 15', style: TextStyle(fontSize: 16)),
+                  Text('Maxtemp : ${weatherModel.maxTemp.round()}',
+                      style: const TextStyle(fontSize: 16)),
+                  Text('Mintemp : ${weatherModel.minTemp.round()}',
+                      style: const TextStyle(fontSize: 16)),
                 ],
               ),
             ],
