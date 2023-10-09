@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
           } 
           else if(state is WeatherLoadedState)
           {
-            return const WeatherInfoBody();
+            return WeatherInfoBody(weather: state.weatherModel,);
           }
           return const Text('There was an error');
         } ,
